@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 import os
-flag = open('flag.txt', 'r').read().strip().encode()
+plain = open('plain.txt', 'r').read().strip().encode()
 
 
 class Encryption:
@@ -15,9 +15,9 @@ class Encryption:
 
 
 def main():
-    global flag
+    global plain
     crypto = Encryption()
-    print('Cipher:', crypto.encrypt(flag).hex())
+    print('Cipher:', crypto.encrypt(plain).hex())
 
 
 if __name__ == '__main__':
